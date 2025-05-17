@@ -60,6 +60,12 @@ class View
         $this->engine = new ModXEngine($environment, $templateCache, $layoutDir, $componentDir);
     }
 
+     public function set($key, $value)
+     {
+         $this->data[$key] = $value;
+         return $this;
+     }
+ 
     /**
      * Sets a key-value pair to be passed to the template.
      * Allows method chaining.
@@ -68,12 +74,19 @@ class View
      * @param mixed $value The variable value
      * @return self
      */
-    public function with(string $key, $value): self
-    {
-        $this->data[$key] = $value;
-        return $this;
-    }
 
+     public function with(array $data)
+     {
+         if(!is_array($data)){
+             throw new \Exception("Only Array Data is Used WIth the With() method, Use the set() method for non array data");
+         }
+ 
+         foreach ($data as $key => $value) {
+             $this->data[$key] = $value;
+         }
+ 
+         return $this;
+     }
    
     /**
      * Sets the layout to be used for rendering.
@@ -112,14 +125,4 @@ class View
         return $this->engine->render($template, $ttl);
     }
 
-    /**
-     * Clears the cache for a specific template or all templates.
-     *
-     * @param string|null $template Template name to clear, null to clear all
-     * @return bool True on success
-     */
-    public function clearCache(?string $template = null): bool
-    {
-        return $this->engine->clearCache($template);
-    }
 }

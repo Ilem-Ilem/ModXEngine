@@ -1,0 +1,21 @@
+1747447059
+template_text_9ca980f610857b8d64fb0e0d865f7058
+s:648:"<header>
+    <h2><!-- Variable title not found --></h2>
+    <p>User: ilem</p>
+</header>
+    <!-- Variable food not found -->
+    <div>
+        here now
+    </div>
+<ul>
+    
+Warning: Undefined variable $array_test in C:\Users\Ilem\AppData\Local\Temp\mod267E.tmp on line 10
+
+Warning: foreach() argument must be of type array|object, null given in C:\Users\Ilem\AppData\Local\Temp\mod267E.tmp on line 10
+
+   
+Warning: Undefined variable $test_data in C:\Users\Ilem\AppData\Local\Temp\mod267E.tmp on line 14
+
+Warning: foreach() argument must be of type array|object, null given in C:\Users\Ilem\AppData\Local\Temp\mod267E.tmp on line 14
+</ul>";

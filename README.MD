@@ -72,11 +72,12 @@ $view = new View(
 
 // Render template
 //The with method is used to set multiple data as array while the set method is used to set single data based on key as the first variable and the value as the second
-$output = $view->with('food', 'Pizza')
+$output = $view  
     ->with(['Apple'=>'red', 'Banana'=>'yellow', 'Orange'=>'orange'])
     ->set('user', 'ilem')
     ->layout('main')
-    ->render('index', 3600); // Cache for 1 hour
+    ->render('text', 3600); // Cache for 1 hour
+ // Cache for 1 hour
 
 echo $output;
 
@@ -141,6 +142,11 @@ Layout Content Placeholder:
     </body>
 </html>
 
+```
+### Comments
+comment is added using the # sign and must end with the # sign
+```
+# comment goes here #
 ```
 
 Environment Configuration
