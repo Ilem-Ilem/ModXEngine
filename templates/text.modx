@@ -1,0 +1,15 @@
+<:component "header">
+    <: food:>
+    <div>
+        here now
+    </div>
+<ul>
+    <:for test, index in array_test:>
+        <li><:index:></li>
+    <:endfor:>
+
+   <?php foreach ($test_data as $key => $value): ?>
+       # code #
+       <?= ucfirst($value) ?>
+   <?php endforeach; ?>
+</ul>

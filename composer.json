@@ -1,0 +1,19 @@
+{
+    "name": "ilem/mod-xengine",
+    "autoload": {
+        "psr-4": {
+            "ModXengine\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ilem-ilem",
+            "email": "therealteckyguys@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/cache": "*",
+        "symfony/filesystem": "^7.2"
+    },
+    "version": "1.0.0"
+}
