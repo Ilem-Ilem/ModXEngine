@@ -80,10 +80,6 @@ $output = $view
  // Cache for 1 hour
 
 echo $output;
-
-// Clear cache
-$view->clearCache('index'); // Clear specific template
-$view->clearCache(); // Clear all templates
 ```
 
 
@@ -98,6 +94,24 @@ $environment = TemplateLoader::templatePath(
 );
 
 $view = new View($environment, __DIR__ . '/cache/');
+```
+
+
+```php
+//using the engine class in place of the view class
+$environment = TemplateLoader::templatePath('templates');
+$cache = new TemplateCache('cache', 'template', 3600);
+
+$engine = new ModXEngine($environment, $cache);
+$engine->set('food', 'yam')
+    ->set('title', 'testing')
+    ->set('user', 'ile,')
+    ->with([
+        'test_data' => ['ssssss', 'ssssss'],
+        'array_test' => ['1', 2, 'testng']
+    ])->layout("main");
+
+echo $engine->render('text', 10);
 ```
 Template Syntax
 ```html

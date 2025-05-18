@@ -22,7 +22,6 @@ use ModXengine\Cache\TemplateCache;
 //  You Can Make use of The View Class
 
 use ModXengine\Environment\FromArray;
-use ModXengine\Environment\TemplateLoader;
 
 
 // Initialize environment
